@@ -2,8 +2,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.IOException;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args){
         int a = 2;
@@ -11,12 +9,11 @@ public class Main {
         float height = 0;
         float bmi = 0;
         Scanner scanner = new Scanner (System.in);
-
         while (true){
             try{
-                System.out.print("Enter your weight: ");
+                System.out.print("Enter your weight(Kgs): ");
                 weight = scanner.nextInt();
-                System.out.print("Enter your height: ");
+                System.out.print("Enter your height(Metres): ");
                 height = scanner.nextFloat();
                 bmi = (float) (weight / Math.pow(height, 2));
                 if (bmi <= 17){
@@ -29,11 +26,9 @@ public class Main {
                 } else if (bmi >= 18 && bmi <= 24){
                     System.out.println("Your BMI is:" + bmi);
                     System.out.println("Your BMI is good");
-
                 } else
                     System.out.println("Thank you for visiting us");
                 break;
-
             }catch (InputMismatchException e){
                 System.out.println("Please enter a correct value");
             }
